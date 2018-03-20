@@ -1,0 +1,47 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 第一步设置主题 -->
+    <style name="StyledIndicators" parent="AppTheme">
+        <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
+        <!--toolbar菜单项图标的颜色-->
+        <item name="android:textColorSecondary">@color/white</item>
+        <!--修改searchView样式-->
+        <item name="searchViewStyle">@style/SearchViewStyle</item>
+    </style>
+    <!-- 第二步设置主题 -->
+    <style name="CustomTabPageIndicator" parent="Widget.TabPageIndicator">
+
+        <!-- 点击时在不同状态下显示的背景色 -->
+        <!--<item name="android:background">@drawable/custom_tab_indicator</item>-->
+        <!-- 分割线图片设置 -->
+        <!--<item name="android:divider">@drawable/custom_tab_indicator_divider</item>-->
+        <!-- 设置分割线的显示位置，或是不显示 -->
+        <item name="android:showDividers">none</item>
+
+        <item name="android:textAppearance">@style/CustomTabPageIndicator.Text</item>
+        <item name="android:textColor">#FF555555</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:dividerPadding">10dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:fadingEdgeLength">10dp</item>
+        <item name="android:fadingEdge">horizontal</item>
+    </style>
+    <!-- 第三步设置主题 -->
+    <style name="CustomTabPageIndicator.Text" parent="android:TextAppearance.Medium">
+        <item name="android:typeface">monospace</item>
+    </style>
+    
+    <style name="SearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="searchIcon">@drawable/ic_search_white_24dp</item>
+    </style>
+
+</resources>

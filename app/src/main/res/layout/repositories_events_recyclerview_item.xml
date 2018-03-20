@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/repositories_events_recyclerView_item_Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:padding="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="center_vertical">
+
+        <com.liji.circleimageview.CircleImageView
+            android:id="@+id/repositories_events_recyclerView_item_Picture"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="5dp"/>
+
+        <TextView
+            android:id="@+id/repositories_events_recyclerView_item_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:textSize="16sp"
+            tools:text="11111"/>
+
+    </LinearLayout>
+
+</LinearLayout>

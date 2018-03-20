@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/repositories_details_menu_Stared"
+        android:title="@string/stared"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/repositories_details_menu_Fork"
+        android:title="@string/fork"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/main_toolbar_search"
+        android:title="@string/clone"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">GitHub</string>
+    <string name="login">登录</string>
+    <string name="ok">确认</string>
+    <string name="cancel">取消</string>
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="stargazers">Stargazers</string>
+    <string name="watchers">Watchers</string>
+    <string name="forks">Forks</string>
+    <string name="events">Events</string>
+    <string name="issues">Issues</string>
+    <string name="readMe">ReadMe</string>
+    <string name="commits">Commits</string>
+    <string name="pullRequests">Pull Requests</string>
+    <string name="source">Source</string>
+    <string name="setting">设置</string>
+    <string name="sign_out">登出</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="downloading">下载管理</string>
+    <string name="download">Clone</string>
+    <string name="unstared">UnStared</string>
+    <string name="stared">Stared</string>
+    <string name="clone">Clone</string>
+    <string name="fork">Fork</string>
+</resources>

@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dong.github.View.Activity.RepositoriesDetailsActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/repositories_details_SwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/repositories_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:background="@color/black"
+                    android:paddingTop="5dp">
+
+                    <com.liji.circleimageview.CircleImageView
+                        android:id="@+id/repositories_details_Picture"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        />
+
+                    <TextView
+                        android:id="@+id/repositories_details_Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        tools:text="Android"/>
+
+                    <TextView
+                        android:id="@+id/repositories_details_Detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/gray"
+                        android:textSize="15sp"
+                        android:paddingBottom="5dp"
+                        tools:text="sadfhsiudfhusdhfuishdfushdgudhsgfgdyufgdyfgdfyugduyfgydfgdyfgdfygdfydgf"/>
+
+                </LinearLayout>
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="1"
+                    android:columnCount="3"
+                    android:layout_gravity="fill">
+
+                    <LinearLayout
+                        android:id="@+id/repositories_details_Stargazers_container"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/repositories_details_Stargazers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            tools:text="100"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:text="@string/stargazers"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/repositories_details_Watchers_container"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/repositories_details_Watchers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            tools:text="100"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="@string/watchers"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/repositories_details_Forks_container"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:id="@+id/repositories_details_Forks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="15sp"
+                            tools:text="100"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="16sp"
+                            android:text="@string/forks"/>
+
+                    </LinearLayout>
+
+                </GridLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:rowCount="3"
+                    android:layout_gravity="fill">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:padding="5dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:scaleType="fitCenter"
+                            android:paddingLeft="10dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_lock_black_24dp"/>
+
+                        <TextView
+                            android:id="@+id/repositories_details_Private"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            tools:text="Public"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:padding="5dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:paddingLeft="10dp"
+                            android:scaleType="fitCenter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_bookmark_border_black_24dp"/>
+
+                        <TextView
+                            android:id="@+id/repositories_details_Language"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            tools:text="Java"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/repositories_details_Issues_container"
+                        android:orientation="horizontal"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:padding="5dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:paddingLeft="10dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_announcement_black_24dp"/>
+
+                        <TextView
+                            android:id="@+id/repositories_details_Issue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            tools:text="1 Issue"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/repositories_details_Owner_container"
+                        android:orientation="horizontal"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:padding="5dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:paddingLeft="10dp"
+                            android:scaleType="fitCenter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/user"/>
+
+                        <TextView
+                            android:id="@+id/repositories_details_Owner"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            tools:text="Android"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:padding="5dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:paddingLeft="10dp"
+                            android:scaleType="fitCenter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_date_range_black_24dp"/>
+
+                        <TextView
+                            android:id="@+id/repositories_details_Date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            tools:text="03/12/12"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:padding="5dp"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:paddingLeft="10dp"
+                            android:scaleType="fitCenter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_assessment_black_24dp"/>
+
+                        <TextView
+                            android:id="@+id/repositories_details_Size"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            tools:text="72.5 KB"/>
+
+                    </LinearLayout>
+
+                </GridLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="2"
+                    android:columnCount="1"
+                    android:layout_gravity="fill">
+
+                    <LinearLayout
+                        android:id="@+id/repositories_details_Events_container"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:paddingLeft="10dp"
+                            android:scaleType="fitCenter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_record_voice_over_black_24dp"/>
+
+                        <TextView
+                            android:id="@+id/repositories_details_Events"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            android:text="@string/events"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/repositories_details_ReadMe_container"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:paddingLeft="10dp"
+                            android:scaleType="fitCenter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_chrome_reader_mode_black_24dp"/>
+
+                        <TextView
+                            android:id="@+id/repositories_details_ReadMe"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            android:text="@string/readMe"/>
+
+                    </LinearLayout>
+
+                </GridLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:rowCount="3"
+                    android:columnCount="1"
+                    android:layout_gravity="fill">
+
+                    <LinearLayout
+                        android:id="@+id/repositories_details_Commits_container"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:paddingLeft="10dp"
+                            android:scaleType="fitCenter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/commit"/>
+
+                        <TextView
+                            android:id="@+id/repositories_details_Commits"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            android:text="@string/commits"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/repositories_details_PullRequests_container"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:paddingLeft="10dp"
+                            android:scaleType="fitCenter"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/pull_request"/>
+
+                        <TextView
+                            android:id="@+id/repositories_details_PullRequests"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            android:text="@string/pullRequests"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/repositories_details_Source_container"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:gravity="center_vertical">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:scaleType="fitCenter"
+                            android:paddingLeft="10dp"
+                            app:srcCompat="@drawable/ic_code_black_24dp" />
+
+
+                        <TextView
+                            android:id="@+id/repositories_details_Source"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="10dp"
+                            android:textSize="16sp"
+                            android:text="@string/source"/>
+
+                    </LinearLayout>
+
+                </GridLayout>
+
+                <LinearLayout
+                    android:id="@+id/repositories_details_Clone_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <Button
+                        android:id="@+id/repositories_details_Star"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:textAllCaps="false"
+                        android:text="@string/stared"/>
+
+                    <Button
+                        android:id="@+id/repositories_details_Fork"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:textAllCaps="false"
+                        android:text="@string/fork"/>
+
+                    <Button
+                        android:id="@+id/repositories_details_Clone"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:textAllCaps="false"
+                        android:text="@string/clone"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dong.github.View.Activity.MainActivity">
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/main_drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.dong.github.View.Activity.MainActivity"
+        tools:openDrawer="start">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/main_toolbar_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/main_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary">
+
+                </android.support.v7.widget.Toolbar>
+
+                <com.miguelcatalan.materialsearchview.MaterialSearchView
+                    android:id="@+id/main_searchView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.miguelcatalan.materialsearchview.MaterialSearchView>
+
+            </FrameLayout>
+
+            <com.viewpagerindicator.TabPageIndicator
+                android:id="@+id/main_TabPageIndicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_toolbar_container">
+
+            </com.viewpagerindicator.TabPageIndicator>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/main_ViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/main_TabPageIndicator">
+
+            </android.support.v4.view.ViewPager>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/main_navigationView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/main_navigation_view_header_layout"
+            app:menu="@menu/main_navigation_view_menu">
+
+        </android.support.design.widget.NavigationView>
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
